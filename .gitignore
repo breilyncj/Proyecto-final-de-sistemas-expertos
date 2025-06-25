@@ -1,0 +1,22 @@
+# Ignorar entorno virtual (en Backend/)
+Backend/venv/
+
+# Ignorar __pycache__ (en Backend/)
+Backend/__pycache__/
+
+# Ignorar todos los archivos .pyc donde sea que estén
+*.pyc
+
+# Ignorar .env
+Backend/.env
+
+# Otros archivos binarios o temporales
+*.pyd
+*.dll
+*.lib
+*.log
+
+# Ignorar archivos del sistema
+.DS_Store
+Thumbs.db
+
