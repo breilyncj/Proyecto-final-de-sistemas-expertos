@@ -98,7 +98,7 @@ threadpoolctl==3.6.0
 tokenizers==0.21.1
 tomli==2.2.1
 -f https://download.pytorch.org/whl/torch_stable.html
-torch==2.7.1+cpu
+torch==2.7.1
 tqdm==4.67.1
 transformers==4.52.4
 typer==0.16.0
