@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from rag_chatbot import generar_embedding_pregunta, buscar_contexto, generar_respuesta
+import os
+import uvicorn
 
 # =============================
 #    Crear instancia FastAPI
@@ -32,3 +34,8 @@ async def preguntar(data: Pregunta):
     contexto = buscar_contexto(embedding)
     respuesta = generar_respuesta(data.pregunta, contexto)
     return {"respuesta": respuesta}
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("api:app", host="0.0.0.0", port=port)
